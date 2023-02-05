@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UFC: Ultimate Fighting Championship</title>
+  </head>
+  <body>
+    <header>
+      <h1>UFC: Ultimate Fighting Championship</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#history">History</a></li>
+        <li><a href="#fighters">Fighters</a></li>
+        <li><a href="#events">Upcoming Events</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="history">
+        <h2>History of UFC</h2>
+        <p>The Ultimate Fighting Championship (UFC) is the largest mixed martial arts organization in the world. It was created in 1993 with the goal of determining the most effective martial art in a real fight. Today, the UFC has become a global phenomenon, featuring some of the world's top fighters and highly anticipated events. </p>
+      </section>
+      <section id="fighters">
+        <h2>Famous Fighters</h2>
+        <ul>
+          <li>Conor McGregor</li>
+          <li>Jon Jones</li>
+          <li>Amanda Nunes</li>
+          <li>Israel Adesanya</li>
+          <li>Khabib Nurmagomedov</li>
+        </ul>
+      </section>
+      <section id="events">
+        <h2>Upcoming Events</h2>
+        <ol id="events-list"></ol>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; UFC 2023</p>
+    </footer>
+    <script>
+      const events = [
+        { name: "UFC 260: Miocic vs. Ngannou 2", date: "March 27, 2023" },
+        { name: "UFC 261: Adesanya vs. Vettori 2", date: "April 10, 2023" },
+        { name: "UFC 262: Oliveira vs. Chandler", date: "May 15, 2023" }
+      ];
+
+      const eventsList = document.querySelector("#events-list");
+
+      for (let i = 0; i < events.length; i++) {
+        const event = events[i];
+        const eventItem = document.createElement("li");
+        eventItem.innerHTML = `${event.name} - ${event.date}`;
+        eventsList.appendChild(eventItem);
+      }
+    </script>
+  </body>
+</html>
